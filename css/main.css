@@ -320,6 +320,7 @@ header a {
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
+  border-bottom: 1px solid black;
 }
 .blogpost .contact-main-container .contact-left p {
   font-size: 1.2rem;
@@ -344,6 +345,7 @@ header a {
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
+  border-bottom: 1px solid black;
 }
 .blogpost .contact-main-container .contact-right p {
   font-size: 1.2rem;
