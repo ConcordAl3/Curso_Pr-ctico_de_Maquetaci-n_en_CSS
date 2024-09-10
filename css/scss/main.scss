@@ -18,14 +18,17 @@ $font-family: 'Roboto mono', monospace;
     padding: 10px 20px;
     font-family: $font-family;
     font-size: 1.2rem;
+    font-weight: 500;
     text-decoration: none;
-    color: white;
-    background-color: #47cfac;
-    border-radius: 7px;
-    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.1);
-    border: none;
+    color: black;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 10px -2px #47cfac;
+    border: 1px solid #47cfac;
     &:hover{
-        transform: scale(1.05);
+        transition: transform 0.5s ease;
+        transform: scale(1.1);
+        background-color: #47cfac;
+        color: white;
     }
 }
 
@@ -143,6 +146,7 @@ header {
 
         .main--button {
             @include stile--button;
+            background-color: #47cfac;
         }
     }
 
@@ -174,6 +178,10 @@ header {
             height: auto;
             object-fit: contain;
             border-radius: 3%;
+            &:hover{
+                transition: transform 0.3s ease;
+                transform: scale(1.05);
+            }
         }
 
         .blogs--principal-text {
@@ -219,6 +227,7 @@ header {
                 height: auto;
                 border-radius: 7px;
                 &:hover{
+                    transition: transform 0.3s ease;
                     transform: scale(1.05);
                 }
             }

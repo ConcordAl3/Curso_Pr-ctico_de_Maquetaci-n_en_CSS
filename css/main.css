@@ -99,15 +99,19 @@ header a {
   padding: 10px 20px;
   font-family: "Roboto mono", monospace;
   font-size: 1.2rem;
+  font-weight: 500;
   text-decoration: none;
-  color: white;
+  color: black;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 10px -2px #47cfac;
+  border: 1px solid #47cfac;
   background-color: #47cfac;
-  border-radius: 7px;
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
-  border: none;
 }
 .home--main .main--container .main--button:hover {
-  transform: scale(1.05);
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+  background-color: #47cfac;
+  color: white;
 }
 
 .blogs--body {
@@ -140,6 +144,10 @@ header a {
      object-fit: contain;
   border-radius: 3%;
 }
+.blogs--main .blogs--section-contain .blogs--principal-img:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+}
 .blogs--main .blogs--section-contain .blogs--principal-text {
   padding: 20px;
 }
@@ -161,15 +169,18 @@ header a {
   padding: 10px 20px;
   font-family: "Roboto mono", monospace;
   font-size: 1.2rem;
+  font-weight: 500;
   text-decoration: none;
-  color: white;
-  background-color: #47cfac;
-  border-radius: 7px;
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
-  border: none;
+  color: black;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 10px -2px #47cfac;
+  border: 1px solid #47cfac;
 }
 .blogs--main .blogs--section-contain .blogs--principal-text .blogs--button-section:hover {
-  transform: scale(1.05);
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+  background-color: #47cfac;
+  color: white;
 }
 .blogs--main .blogs--contain-section {
   padding: 40px 50px 40px 50px;
@@ -193,6 +204,7 @@ header a {
   border-radius: 7px;
 }
 .blogs--main .blogs--contain-section .blogs--principal-contain .img--contain:hover {
+  transition: transform 0.3s ease;
   transform: scale(1.05);
 }
 .blogs--main .blogs--contain-section .blogs--principal-contain .blogs--title-article {
@@ -216,17 +228,20 @@ header a {
   padding: 10px 20px;
   font-family: "Roboto mono", monospace;
   font-size: 1.2rem;
+  font-weight: 500;
   text-decoration: none;
-  color: white;
-  background-color: #47cfac;
-  border-radius: 7px;
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
-  border: none;
+  color: black;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 10px -2px #47cfac;
+  border: 1px solid #47cfac;
   margin-top: 15px;
   margin-left: 2px;
 }
 .blogs--main .blogs--contain-section .blogs--principal-contain .blogs--button:hover {
-  transform: scale(1.05);
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+  background-color: #47cfac;
+  color: white;
 }
 
 /* 
