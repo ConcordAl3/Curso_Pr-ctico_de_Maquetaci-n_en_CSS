@@ -58,6 +58,11 @@ body {
     right: 0;
 }
 
+.grid--container{
+    max-width: 980px;
+    margin: auto;
+}
+
 header {
     width: 100%;
     display: grid;
@@ -152,6 +157,10 @@ header {
 
 }
 
+/* 
+    pagina blogs
+*/
+
 .blogs--body{
     position: relative;
 }
@@ -165,48 +174,48 @@ header {
         padding: 40px 50px 40px 50px;
         background-color: #e6e9ed;
         box-shadow: inset 0px -29px 43px -32px rgba(0,0,0,0.29);
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto;
-        justify-items: center;
-        align-items: center;
-        gap: 20px;
-        background-color: #e6e9ed;
+        
+        .blogs--contain-new {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: auto;
+            justify-items: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #e6e9ed;
 
-        .blogs--principal-img{
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 3%;
-            &:hover{
-                transition: transform 0.3s ease;
-                transform: scale(1.05);
-            }
-        }
-
-        .blogs--principal-text {
-            padding: 20px;
-
-            .blogs--title-section{
-                @include title-stile;
-                margin-bottom: 20px;
+            .blogs--principal-img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                border-radius: 3%;
+                &:hover{
+                    transition: transform 0.3s ease;
+                    transform: scale(1.05);
+                }
             }
 
-            .blogs--parrafo-section {
-                @include parrafo-stile;
-                text-align: justify;
-                margin-bottom: 80px;
-            }
+            .blogs--principal-text {
+                padding: 20px;
 
-            .blogs--button-section{
-                @include stile--button;                
+                .blogs--title-section{
+                    @include title-stile;
+                    margin-bottom: 20px;
+                }
+
+                .blogs--parrafo-section {
+                    @include parrafo-stile;
+                    text-align: justify;
+                    margin-bottom: 80px;
+                }
+
+                .blogs--button-section{
+                    @include stile--button;                
+                }
             }
         }
     }
 
-    /* 
-        mi pagina blogs
-    */
     .blogs--contain-section{
         padding: 40px 50px 40px 50px;
 

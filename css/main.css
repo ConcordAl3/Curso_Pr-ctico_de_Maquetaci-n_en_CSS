@@ -18,6 +18,11 @@ body {
   right: 0;
 }
 
+.grid--container {
+  max-width: 980px;
+  margin: auto;
+}
+
 header {
   width: 100%;
   display: grid;
@@ -114,6 +119,9 @@ header a {
   color: white;
 }
 
+/* 
+    pagina blogs
+*/
 .blogs--body {
   position: relative;
 }
@@ -121,14 +129,13 @@ header a {
 .blogs--main {
   width: 100%;
   height: auto;
-  /* 
-      mi pagina blogs
-  */
 }
 .blogs--main .blogs--section-contain {
   padding: 40px 50px 40px 50px;
   background-color: #e6e9ed;
   box-shadow: inset 0px -29px 43px -32px rgba(0, 0, 0, 0.29);
+}
+.blogs--main .blogs--section-contain .blogs--contain-new {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
@@ -137,33 +144,33 @@ header a {
   gap: 20px;
   background-color: #e6e9ed;
 }
-.blogs--main .blogs--section-contain .blogs--principal-img {
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 3%;
 }
-.blogs--main .blogs--section-contain .blogs--principal-img:hover {
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-img:hover {
   transition: transform 0.3s ease;
   transform: scale(1.05);
 }
-.blogs--main .blogs--section-contain .blogs--principal-text {
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-text {
   padding: 20px;
 }
-.blogs--main .blogs--section-contain .blogs--principal-text .blogs--title-section {
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-text .blogs--title-section {
   font-size: 1.7rem;
   font-weight: bold;
   font-family: "Roboto mono", monospace;
   margin-bottom: 20px;
 }
-.blogs--main .blogs--section-contain .blogs--principal-text .blogs--parrafo-section {
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-text .blogs--parrafo-section {
   font-size: 1.2rem;
   font-family: "Roboto mono", monospace;
   text-align: justify;
   margin-bottom: 80px;
 }
-.blogs--main .blogs--section-contain .blogs--principal-text .blogs--button-section {
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-text .blogs--button-section {
   display: inline-block;
   height: 35px;
   padding: 10px 20px;
@@ -176,7 +183,7 @@ header a {
   box-shadow: inset 0px 0px 10px -2px #47cfac;
   border: 1px solid #47cfac;
 }
-.blogs--main .blogs--section-contain .blogs--principal-text .blogs--button-section:hover {
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-text .blogs--button-section:hover {
   transition: transform 0.5s ease;
   transform: scale(1.1);
   background-color: #47cfac;
