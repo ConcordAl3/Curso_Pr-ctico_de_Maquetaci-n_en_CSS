@@ -252,6 +252,107 @@ header a {
 }
 
 /* 
+    pagina de blog
+*/
+.blogpost {
+  width: 100%;
+  height: auto;
+}
+.blogpost .blogpost--img-container {
+  padding: 50px 25px;
+}
+.blogpost .blogpost--img-container img {
+  width: 100%;
+  height: 100%;
+}
+.blogpost .blogpost--main-container {
+  padding: 0 50px 40px;
+}
+.blogpost .blogpost--main-container .grid--container h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Roboto mono", monospace;
+  font-size: 1.5rem;
+  padding: 20px 1px;
+  border-bottom: 1px solid #cdd2da;
+}
+.blogpost .blogpost--main-container .grid--container article h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Roboto mono", monospace;
+  padding: 20px 3px;
+}
+.blogpost .blogpost--main-container .grid--container article p {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  text-align: justify;
+  padding: 0px 10px;
+}
+.blogpost .contact-main-container {
+  width: 100%;
+  height: 20vh;
+  padding: 20px 40px;
+  background-color: #e6e9ed;
+}
+.blogpost .contact-main-container .grid--container-article {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(2, 30px);
+  justify-items: end;
+  justify-content: center;
+  gap: 10px;
+  grid-template-areas: "uno dos tres cuatro" "uno dos tres cuatro";
+}
+.blogpost .contact-main-container .img-left {
+  grid-area: uno;
+}
+.blogpost .contact-main-container .img-left img {
+  width: 100%;
+  height: 100%;
+}
+.blogpost .contact-main-container .contact-left {
+  grid-area: dos;
+  margin-top: 10px;
+}
+.blogpost .contact-main-container .contact-left a {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+.blogpost .contact-main-container .contact-left p {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.blogpost .contact-main-container .img-right {
+  grid-area: tres;
+}
+.blogpost .contact-main-container .img-right img {
+  width: 100%;
+  height: 100%;
+}
+.blogpost .contact-main-container .contact-right {
+  grid-area: cuatro;
+  margin-top: 10px;
+}
+.blogpost .contact-main-container .contact-right a {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+.blogpost .contact-main-container .contact-right p {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* 
     footer
 */
 footer {
