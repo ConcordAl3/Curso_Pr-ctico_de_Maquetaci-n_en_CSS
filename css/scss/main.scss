@@ -1,3 +1,41 @@
+/* font-family */
+$font-family: 'Roboto mono', monospace;
+
+@mixin title-stile{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: $font-family;
+}
+
+@mixin parrafo-stile{
+    font-size: 1.2rem;
+    font-family: $font-family;
+}
+
+@mixin stile--button {
+    display: inline-block;
+    height: 35px;
+    padding: 10px 20px;
+    font-family: $font-family;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    background-color: #47cfac;
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.1);
+    border: none;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+@mixin hr {
+    border: none;
+    height: 1px;
+    background-color: #000;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -22,7 +60,7 @@ header {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-rows: 50px;
-    box-shadow: 0px 12px 17px 5px rgba(0,0,0,0.7);
+    box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.4);
 
     .header--icons-container {
         width: 100%;
@@ -65,6 +103,7 @@ header {
             a{
                 margin: 0 30px 0 10px;
                 font-size: 1.2rem;
+                font-family: $font-family;
                 border-bottom: 1px solid black;
             }
         }
@@ -77,45 +116,155 @@ header {
     }
 }
 
-main{
+.home--main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    background-image: url('https://i.postimg.cc/zfNzhdQw/Cover.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 115px);
 
-    img{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-    }
+   .main--container {
+        display: grid;
+        height: 420px;
+        grid-column: 2;
+        justify-items: center;
+        
 
-    .main--container {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        position: relative;
-        z-index: 1;
-
-        h1 {
-            margin-top: 40px;
+        .home--main-title {
+            @include title-stile;
+            margin-top: 70px;
+            letter-spacing: 15px;
             text-align: center;
             color: white;
-            font-family: 'Varela Round', Helvetica, Arial, sans-serif;
         }
 
-        button {
-            width: 100px;
-            height: 40px;
-            font-family: 'Varela Round', Helvetica, Arial, sans-serif;
-            background-color: #47cfac;
-            border-radius: 7px;
-            box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.1);
-            border: none;
-            &:hover{
-                cursor: pointer;
-                transform: scale(1.05);
+        .main--button {
+            @include stile--button;
+        }
+    }
+
+}
+
+.blogs--body{
+    position: relative;
+}
+
+.blogs--main{
+    width: 100%;
+    height: auto;
+    
+
+    .blogs--section-contain {
+        padding: 40px 50px 40px 50px;
+        background-color: #e6e9ed;
+        box-shadow: inset 0px -29px 43px -32px rgba(0,0,0,0.29);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        justify-items: center;
+        align-items: center;
+        gap: 20px;
+        background-color: #e6e9ed;
+
+        .blogs--principal-img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 3%;
+        }
+
+        .blogs--principal-text {
+            padding: 20px;
+
+            .blogs--title-section{
+                @include title-stile;
+                margin-bottom: 20px;
+            }
+
+            .blogs--parrafo-section {
+                @include parrafo-stile;
+                text-align: justify;
+                margin-bottom: 80px;
+            }
+
+            .blogs--button-section{
+                @include stile--button;                
             }
         }
     }
 
+    /* 
+        mi pagina blogs
+    */
+    .blogs--contain-section{
+        padding: 40px 50px 40px 50px;
+
+        .blogs--title-main{
+            @include title-stile;
+            margin-bottom: 20px;
+        }
+
+        .blogs--principal-contain{
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
+            gap: 25px;
+
+            .img--contain {
+                width: 100%;
+                height: auto;
+                border-radius: 7px;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+
+            .blogs--title-article{
+                @include title-stile;
+                font-size: 1.5rem;
+                margin-top: 15px;
+            }
+
+            .blogs--parrafo-article {
+                @include parrafo-stile;
+                font-size: 1rem;
+                font-weight: 100;
+                text-align: justify;
+                margin-top: 10px;
+            }
+
+            .blogs--button{
+                @include stile--button;
+                margin-top: 15px;
+                margin-left: 2px;
+            }
+        }
+    }
+
+}
+
+/* 
+    footer
+*/
+
+footer {
+    width: 100%;
+    border-top: 20px solid #47cfac;
+
+    .blogs--footer-contenedor{
+        width: 100%;
+        height: 60%;
+        background-color: #23262d;
+
+        .blogs--footer-parrafo{
+            @include parrafo-stile;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+    }
 }
