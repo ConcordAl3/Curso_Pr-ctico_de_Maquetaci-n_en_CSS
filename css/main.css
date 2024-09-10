@@ -437,6 +437,71 @@ header a {
   font-size: 1rem;
   text-align: justify;
 }
+.perfil--main-container .contact-main-container {
+  width: 100%;
+  height: 20vh;
+  padding: 20px 40px;
+  background-color: #e6e9ed;
+}
+.perfil--main-container .contact-main-container .grid--container-article {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(2, 30px);
+  justify-items: end;
+  justify-content: center;
+  gap: 10px;
+  grid-template-areas: "uno dos tres cuatro" "uno dos tres cuatro";
+}
+.perfil--main-container .contact-main-container .img-left {
+  grid-area: uno;
+}
+.perfil--main-container .contact-main-container .img-left img {
+  width: 100%;
+  height: 100%;
+}
+.perfil--main-container .contact-main-container .contact-left {
+  grid-area: dos;
+  margin-top: 10px;
+}
+.perfil--main-container .contact-main-container .contact-left a {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+.perfil--main-container .contact-main-container .contact-left p {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.perfil--main-container .contact-main-container .img-right {
+  grid-area: tres;
+}
+.perfil--main-container .contact-main-container .img-right img {
+  width: 100%;
+  height: 100%;
+}
+.perfil--main-container .contact-main-container .contact-right {
+  grid-area: cuatro;
+  margin-top: 10px;
+}
+.perfil--main-container .contact-main-container .contact-right a {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+.perfil--main-container .contact-main-container .contact-right p {
+  font-size: 1.2rem;
+  font-family: "Roboto mono", monospace;
+  font-size: 1rem;
+  margin-top: 10px;
+}
 
 /* 
     footer
