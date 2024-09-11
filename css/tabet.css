@@ -1,0 +1,59 @@
+.blogs--main .blogs--contain-section .blogs--principal-contain {
+  margin-top: 30px;
+  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.blogs--main .blogs--contain-section .blogs--principal-contain article {
+  margin-bottom: 15px;
+}
+
+.blogpost .blogpost--img-container {
+  padding: 40px;
+}
+.blogpost .blogpost--main-container {
+  padding: 0 40px;
+}
+.blogpost .contact-main-container {
+  padding: 15px 90px 15px 45px;
+}
+
+.perfil--main-container .perfil--section-cabecera .perfil--section-cabecera2 {
+  padding: 45px;
+}
+.perfil--main-container .perfil--section-proyect {
+  padding: 40px;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  grid-template-areas: "uno dos" "tres tres";
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-1 {
+  grid-area: uno;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-2 {
+  grid-area: dos;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  grid-area: tres;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-3 .title3 {
+  padding: 15px 0px 5px 200px;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-3 .parrafo3 {
+  padding: 5px 200px;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain article .title--proyect {
+  padding: 15px 0px 5px 30px;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain article .parrafo--proyect {
+  padding: 0px 30px 0px 30px;
+}
+.perfil--main-container .contact-main-container {
+  padding: 15px 90px 15px 45px;
+}/*# sourceMappingURL=tabet.css.map */

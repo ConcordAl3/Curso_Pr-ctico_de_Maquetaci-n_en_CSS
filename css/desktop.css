@@ -1,0 +1,145 @@
+.grid--container {
+  max-width: 990px;
+  margin: auto;
+}
+
+.blogs--main .blogs--section-contain .blogs--contain-new {
+  grid-template-columns: repeat(2, 1fr);
+}
+.blogs--main .blogs--section-contain .blogs--contain-new .blogs--principal-text {
+  align-items: flex-start;
+}
+.blogs--main .blogs--contain-section .blogs--principal-contain {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 10px;
+}
+
+.blogpost .blogpost--img-container {
+  display: flex;
+  justify-content: center;
+}
+.blogpost .blogpost--img-container img {
+  border-radius: 3%;
+  width: 85%;
+  height: 85%;
+}
+.blogpost .blogpost--main-container .grid--container h3 {
+  font-size: 2rem;
+}
+.blogpost .blogpost--main-container .grid--container article h1 {
+  font-size: 2rem;
+}
+.blogpost .blogpost--main-container .grid--container article p {
+  font-size: 1.53rem;
+  font-weight: 300;
+}
+.blogpost .contact-main-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.blogpost .contact-main-container .grid--container-article .img-left img {
+  width: 100px;
+  height: 80px;
+}
+.blogpost .contact-main-container .grid--container-article .contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.blogpost .contact-main-container .grid--container-article .contact-left a {
+  font-size: 1.55rem;
+}
+.blogpost .contact-main-container .grid--container-article .contact-left p {
+  font-size: 1.37rem;
+}
+.blogpost .contact-main-container .grid--container-article .img-right {
+  margin-right: 5px;
+}
+.blogpost .contact-main-container .grid--container-article .img-right img {
+  width: 100px;
+  height: 80px;
+}
+.blogpost .contact-main-container .grid--container-article .contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.blogpost .contact-main-container .grid--container-article .contact-right a {
+  font-size: 1.55rem;
+}
+.blogpost .contact-main-container .grid--container-article .contact-right p {
+  font-size: 1.37rem;
+}
+
+.perfil--main-container .perfil--section-cabecera .perfil--section-cabecera2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.perfil--main-container .perfil--section-cabecera .perfil--section-cabecera2 .text--contain h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+.perfil--main-container .perfil--section-cabecera .perfil--section-cabecera2 .text--contain p {
+  font-size: 1.55rem;
+}
+.perfil--main-container .perfil--section-proyect h2 {
+  font-size: 2rem;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "uno dos tres";
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-3 {
+  display: block;
+  grid-area: tres;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-3 .title--proyect {
+  padding: 15px 0px 5px 30px;
+}
+.perfil--main-container .perfil--section-proyect .article--proyect-contain .proyect-3 .parrafo--proyect {
+  padding: 0px 30px 0px 30px;
+}
+.perfil--main-container .contact-main-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.perfil--main-container .contact-main-container .grid--container-article .img-left img {
+  width: 100px;
+  height: 80px;
+}
+.perfil--main-container .contact-main-container .grid--container-article .contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.perfil--main-container .contact-main-container .grid--container-article .contact-left a {
+  font-size: 1.55rem;
+}
+.perfil--main-container .contact-main-container .grid--container-article .contact-left p {
+  font-size: 1.37rem;
+}
+.perfil--main-container .contact-main-container .grid--container-article .img-right {
+  margin-right: 5px;
+}
+.perfil--main-container .contact-main-container .grid--container-article .img-right img {
+  width: 100px;
+  height: 80px;
+}
+.perfil--main-container .contact-main-container .grid--container-article .contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.perfil--main-container .contact-main-container .grid--container-article .contact-right a {
+  font-size: 1.55rem;
+}
+.perfil--main-container .contact-main-container .grid--container-article .contact-right p {
+  font-size: 1.37rem;
+}/*# sourceMappingURL=desktop.css.map */
