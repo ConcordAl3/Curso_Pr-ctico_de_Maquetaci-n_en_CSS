@@ -13,7 +13,6 @@ $font-family: 'Roboto mono', monospace;
 }
 
 @mixin stile--button {
-    display: inline-block;
     height: 35px;
     padding: 10px 20px;
     font-family: $font-family;
@@ -58,11 +57,6 @@ body {
     right: 0;
 }
 
-.grid--container{
-    max-width: 980px;
-    margin: auto;
-}
-
 header {
     width: 100%;
     display: grid;
@@ -96,17 +90,15 @@ header {
                 justify-content: flex-end;
 
                 img {
-                    width: 220px;
-                    margin: 0 100px 0 10px;
+                    width: 100%;
+                    margin-left: 95px;
                 }
             }
         }
 
         .profile--link {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-right: 45px;
+            display: inline-block;
+            margin: auto 0;
             
             a{
                 margin: 0 30px 0 10px;
@@ -125,14 +117,14 @@ header {
 }
 
 .home--main{
-    width: 100%;
+    width: 100vw;
+    height: calc(100vh - 80px);
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     background-image: url('https://i.postimg.cc/zfNzhdQw/Cover.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: calc(100vh - 115px);
 
    .main--container {
         display: grid;
@@ -169,23 +161,22 @@ header {
     width: 100%;
     height: auto;
     
-
     .blogs--section-contain {
-        padding: 40px 50px 40px 50px;
+        padding: 20px;
         background-color: #e6e9ed;
         box-shadow: inset 0px -29px 43px -32px rgba(0,0,0,0.29);
         
         .blogs--contain-new {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             grid-auto-rows: auto;
             justify-items: center;
             align-items: center;
-            gap: 20px;
-            background-color: #e6e9ed;
+            gap: 10px;
 
             .blogs--principal-img{
-                width: 100%;
+                max-width: 85%;
+                min-width: 80%;
                 height: auto;
                 object-fit: contain;
                 border-radius: 3%;
@@ -197,6 +188,9 @@ header {
 
             .blogs--principal-text {
                 padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
                 .blogs--title-section{
                     @include title-stile;
@@ -210,26 +204,29 @@ header {
                 }
 
                 .blogs--button-section{
-                    @include stile--button;                
+                    @include stile--button;
+                    
                 }
             }
         }
     }
 
     .blogs--contain-section{
-        padding: 40px 50px 40px 50px;
+        padding: 25px 15px;
 
         .blogs--title-main{
             @include title-stile;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-align: center;
         }
 
         .blogs--principal-contain{
             margin-top: 10px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
             grid-auto-rows: auto;
-            gap: 25px;
+            gap: 35px;
+            margin-bottom: 40px;
 
             .img--contain {
                 width: 100%;
@@ -253,12 +250,11 @@ header {
                 font-weight: 100;
                 text-align: justify;
                 margin-top: 10px;
+                margin-bottom: 30px;
             }
 
             .blogs--button{
                 @include stile--button;
-                margin-top: 15px;
-                margin-left: 2px;
             }
         }
     }
@@ -273,7 +269,7 @@ header {
     height: auto;
 
     .blogpost--img-container{
-        padding: 50px 25px;
+        padding: 30px 25px;
             img {
                 width: 100%;
                 height: 100%;
@@ -281,27 +277,29 @@ header {
         }
     
     .blogpost--main-container{
-        padding: 0 50px 40px;
+        padding: 0 20px;
+        margin-bottom: 40px;
     
         .grid--container{
     
             h3 {
                 @include title-stile;
-                font-size: 1.5rem;
-                padding: 20px 1px;
+                text-align: center;
+                padding-bottom: 5px;
                 border-bottom: 1px solid #cdd2da;
             }
     
             article {
                 h1{
                     @include title-stile;
-                    padding: 20px 3px;
+                    text-align: center;
+                    padding: 20px
                 }
     
                 p {
                     @include parrafo-stile;
                     text-align: justify;
-                    padding: 0px 10px;
+                    padding: 0px 5px;
                 }
             }
         }
@@ -309,78 +307,68 @@ header {
         
     .contact-main-container{
         width: 100%;
-            height: 20vh;
-            padding: 20px 40px;
-            background-color: #e6e9ed;
-            
-            .grid--container-article{
-                display: grid;
-                grid-template-columns: repeat(4, 120px);
-                grid-template-rows: repeat(2, 30px);
-                justify-items: end;
-                justify-content: center;
-                gap: 10px;
-                grid-template-areas: 
-                "uno dos tres cuatro"
-                "uno dos tres cuatro";
+        padding: 15px 30px 15px 15px;
+        background-color: #e6e9ed;
+        
+        .grid--container-article{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: end;
+            justify-content: center;
+            gap: 5px;
+            grid-template-areas: 
+            "uno dos tres cuatro"
+            "uno dos tres cuatro";
+        }
+        
+        .img-left{
+            grid-area: uno;
+            img{
+                width: 65px;
+                height: 60px;
             }
-            
-            .img-left{
-                grid-area: uno;
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
+        }
+        .contact-left{
+            grid-area: dos;
+            margin-top: 10px;
+            a{
+                @include parrafo-stile;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: black;
+                border-bottom: 1px solid black;
             }
-
-            .contact-left{
-                grid-area: dos;
+            p {
+                @include parrafo-stile;
+                font-size: 1rem;
                 margin-top: 10px;
-
-                a{
-                    @include parrafo-stile;
-                    font-size: 1.2rem;
-                    text-decoration: none;
-                    color: black;
-                    border-bottom: 1px solid black;
-                }
-
-                p {
-                    @include parrafo-stile;
-                    font-size: 1rem;
-                    margin-top: 10px;
-                    
-                }
+                
             }
-
-            .img-right{
-                grid-area: tres;
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
+        }
+        .img-right{
+            grid-area: tres;
+            img{
+                width: 60px;
+                height: 60px;
             }
-
-            .contact-right{
-                grid-area: cuatro;
+        }
+        .contact-right{
+            grid-area: cuatro;
+            margin-top: 10px;
+            a{
+                @include parrafo-stile;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: black;
+                border-bottom: 1px solid black;
+            }
+            p {
+                @include parrafo-stile;
+                font-size: 1rem;
                 margin-top: 10px;
-
-                a{
-                    @include parrafo-stile;
-                    font-size: 1.2rem;
-                    text-decoration: none;
-                    color: black;
-                    border-bottom: 1px solid black;
-                }
-
-                p {
-                    @include parrafo-stile;
-                    font-size: 1rem;
-                    margin-top: 10px;
-                    
-                }
+                
+            }
         }
     }
 
@@ -400,14 +388,13 @@ header {
         .perfil--section-cabecera2{
             padding: 20px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             grid-auto-rows: auto;
             justify-content: center;
-            gap: 20px;
     
             .img--contain {
-    
-    
+                margin-bottom: 10px;
+                
                 img{
                     width: 100%;
                     height: 100%;
@@ -420,11 +407,11 @@ header {
             }
 
             .text--contain {
-                padding: 20px;
+                padding: 10px;
 
                 h3{
                     @include title-stile;
-                    margin-bottom: 30px;
+                    margin-bottom: 7px;
                 }
 
                 p {
@@ -436,79 +423,83 @@ header {
     }
 
     .perfil--section-proyect{
-        padding: 20px;
+        padding: 15px;
         h2{
             @include title-stile;
+            text-align: center;
             padding-bottom: 10px;
             border-bottom: 1.5px solid #cdd2da;
         }
 
         .article--proyect-contain{
-            margin-top: 25px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 10px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 170px);
-            gap: 20px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 15px;
 
-            .img--pryect{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 3%;
-                margin-bottom: 15px;
-                &:hover{
-                    transition: transform 0.3s ease;
-                    transform: scale(1.05);
+            div {
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+
+                .img--pryect{
+                    width: 265px;
+                    height: 200px;
+                    border-radius: 3%;
+                    object-fit: cover;
+                    &:hover{
+                        transition: transform 0.3s ease;
+                        transform: scale(1.05);
+                    }
+                    
                 }
-                
             }
 
             .title--proyect{
                 @include title-stile;
                 font-size: 1.3rem;
-                margin-bottom: 10px;
+                padding: 15px 0px 5px 0px;
             }
 
             .parrafo--proyect{
                 @include parrafo-stile;
                 font-size: 1rem;
+                padding: 0px 5px;;
                 text-align: justify;
-            
             }
         }
     }
 
     .contact-main-container{
         width: 100%;
-        height: 20vh;
-        padding: 20px 40px;
+        padding: 15px 30px 15px 15px;
         background-color: #e6e9ed;
-            
+        
         .grid--container-article{
             display: grid;
-            grid-template-columns: repeat(4, 120px);
-            grid-template-rows: repeat(2, 30px);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             justify-items: end;
             justify-content: center;
-            gap: 10px;
+            gap: 5px;
             grid-template-areas: 
             "uno dos tres cuatro"
             "uno dos tres cuatro";
         }
-            
+        
         .img-left{
             grid-area: uno;
-
             img{
-                width: 100%;
-                height: 100%;
+                width: 65px;
+                height: 60px;
             }
         }
-
         .contact-left{
             grid-area: dos;
             margin-top: 10px;
-
             a{
                 @include parrafo-stile;
                 font-size: 1.2rem;
@@ -516,28 +507,23 @@ header {
                 color: black;
                 border-bottom: 1px solid black;
             }
-
             p {
                 @include parrafo-stile;
                 font-size: 1rem;
                 margin-top: 10px;
-                    
+                
             }
         }
-
         .img-right{
             grid-area: tres;
-
             img{
-                width: 100%;
-                height: 100%;
+                width: 60px;
+                height: 60px;
             }
         }
-
         .contact-right{
             grid-area: cuatro;
             margin-top: 10px;
-
             a{
                 @include parrafo-stile;
                 font-size: 1.2rem;
@@ -545,11 +531,10 @@ header {
                 color: black;
                 border-bottom: 1px solid black;
             }
-
             p {
                 @include parrafo-stile;
                 font-size: 1rem;
-                margin-top: 10px;    
+                margin-top: 10px;
             }
         }
     }
